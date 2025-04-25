@@ -2,35 +2,178 @@
 <html>
     <head>
 
-     
       
-         
+        <style>
 
+
+.search-icon {
+            position: absolute;
+            top: 35px; /* فاصله از بالای صفحه */
+            right: 250px; /* فاصله از سمت راست */
+            width: 27px; /* عرض آیکون */
+            height: 27px; /* ارتفاع آیکون */
+            cursor: pointer; /* نشانگر ماوس به حالت کلیک تغییر می‌کند */
+            transition: transform 0.3s ease; /* انیمیشن هنگام هاور */
+        }
+
+        .search-icon:hover {
+            transform: scale(1.2); /* بزرگ‌تر شدن هنگام هاور */
+        }
+
+
+
+
+
+
+
+
+
+        /* استایل دکمه */
+        .contact-button {
+            position: absolute;
+            top: 30px; /* فاصله از بالای صفحه */
+            right: 100px; /* فاصله از سمت راست */
+            padding: 10px 20px; /* فاصله داخلی */
+            border: 2px solid white; /* حاشیه */
+            border-radius: 25px; /* گرد کردن گوشه‌ها */
+            background-color: transparent; /* پس‌زمینه شفاف */
+            color: white; /* رنگ متن */
+            font-size: 16px; /* اندازه فونت */
+            font-family: Arial, sans-serif; /* فونت */
+            text-decoration: none; /* حذف خط زیر متن */
+            text-align: center; /* متن در مرکز */
+            transition: all 0.3s ease; /* انیمیشن تغییر رنگ */
+        }
+
+        /* تغییر رنگ هنگام هاور */
+        .contact-button:hover {
+            background-color: rgb(0, 0, 0); /* پس‌زمینه سفید */
+            color: rgb(255, 244, 244); /* رنگ متن سیاه */
+        }
+ 
+
+
+            .social-icons {
+                position: absolute;
+                top: 35px; /* فاصله از بالای صفحه */
+               left: 200px; /* فاصله از سمت راست */
+                display: flex;
+                gap: 25px; /* فاصله بین آیکون‌ها */
+            }
     
+            .social-icons a img {
+                width: 30px; /* عرض آیکون */
+                height: 30px; /* ارتفاع آیکون */
+            }
+
+        .social-icons a img:hover {
+            filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(500%) hue-rotate(200deg);
+        }
+
+
+
+        
+
+            
+                .top-line {
+                  width: 100%;
+                  height: 2px; /* ضخامت خط */
+                  background-color: white; /* رنگ خط */
+                  position: absolute;
+                  top: 100px;
+                  left: 0;
+                  opacity: 0.1;
+                
+                }
+
+                .logo {
+            position: absolute;
+            top: 20px; /* فاصله از بالای صفحه */
+            left: 44%; /* فاصله از سمت چپ */
+            width: 200px; /* عرض لوگو */
+            height: auto; /* ارتفاع متناسب با عرض */
+        }
+            
+              /* استایل برای والد */
+              .image-container {
+                position: relative;
+                width: 1520px; /* باید با عرض تصویر اول برابر باشد */
+                height: 700px; /* باید با ارتفاع تصویر اول برابر باشد */
+              }
+        
+              /* استایل برای تصویر اول */
+              .background-image {
+                width: 100%;
+                height: 100%;
+                opacity: 0.2; /* شفافیت */
+              }
+        
+              /* استایل برای تصویر دوم */
+              .overlay-image {
+                position: absolute;
+                top: 430px; /* موقعیت عمودی تصویر دوم */
+                left: 50%; /* موقعیت افقی تصویر دوم */
+                transform: translate(-50%, -50%); /* برای قرار دادن دقیق در مرکز */
+                width: 360px; /* عرض دلخواه */
+                height: auto; /* ارتفاع متناسب با عرض */
+              }
+            </style>
+
+          </head>
+      
+
         <body style="background-color:#0e0303dd;
 color:white;">
-        
- 
-            <img src="te123.jpg" alt="back"
-            opacity="0.3";
-            height="100%";
-            width="100%"; 
-            top="12px";
-            />
-         
-        
-            
-       
+
+
+  <!-- آیکون جستجو -->
+  <img src="search.png" alt="Search" class="search-icon" onclick="alert('Search clicked!')">
 
 
 
+  <!-- لوگو -->
+  <img src="logo1.png" alt="Logo" class="logo" />
+
+
+    <!-- لوگو -->
+    <img src="logo1.png" alt="Logo" class="logo" />
+
+    <!-- آیکون‌های شبکه‌های اجتماعی -->
+    <div class="social-icons">
+        <a href="www.youtube.com/@StichcraftStudio-tailor" target="_blank">
+            <img src="youtube.png" alt="YouTube">
+        </a>
+        <a href="www.youtube.com/@StichcraftStudio-tailor" target="_blank">
+            <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="www.youtube.com/@StichcraftStudio-tailor" target="_blank">
+            <img src="twitter.png" alt="Twitter">
+        </a>
+        <a href="www.youtube.com/@StichcraftStudio-tailor" target="_blank">
+            <img src="facebook.png" alt="Facebook">
+        </a>
+    </div>
 
 
 
+  
 
 
+    <!-- خط بالای صفحه -->
+    <div class="top-line"></div>
+
+    <div class="image-container">
+        <!-- تصویر پس‌زمینه -->
+        <img src="te5.jpg" alt="back" class="background-image" />
+        <!-- تصویر رویی -->
+        <img src="m12.png" alt="overlay" class="overlay-image" />
+    </div>
 
 
+    <body style="background-color: #0e0303dd; color: rgb(0, 0, 0);">
+
+ <!-- دکمه تماس -->
+ <a href="#contact" class="contact-button">Contact Us</a>
 
 
 
@@ -38,5 +181,5 @@ color:white;">
         </body>
        
 
-    </head>
+    
 </html>
