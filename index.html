@@ -2,8 +2,80 @@
 <html>
     <head>
 
-      
+        <link href="ComicRelief-Bold.ttf" rel="stylesheet">
+
+
         <style>
+
+
+     /* استایل برای منوی اصلی */
+     .menu {
+            position: absolute; /* قرار دادن منو به‌صورت مطلق */
+            top: 70px; /* فاصله از بالای صفحه */
+            left: 0;
+            width: 100%; /* عرض کامل صفحه */
+            z-index: 2; /* قرار دادن منو بالاتر از تصویر */
+            display: flex;
+            justify-content: center; /* قرار دادن آیتم‌ها در مرکز */
+            align-items: center;
+            gap: 30px; /* فاصله بین آیتم‌ها */
+            padding: 10px 0; /* فاصله داخلی */
+            margin-top: 50px; /* فاصله از بالای صفحه */
+        }
+
+        /* استایل برای آیتم‌های منو */
+        .menu a {
+            text-decoration: none; /* حذف خط زیر لینک‌ها */
+            color: white; /* رنگ متن */
+            font-size: 16px; /* اندازه فونت */
+            font-family: Arial, sans-serif; /* فونت خوانا */
+            text-transform: uppercase; /* حروف بزرگ */
+            position: relative; /* برای افکت هاور */
+            transition: opacity 0.3s ease; /* انیمیشن محو شدن */
+        }
+
+        /* افکت هاور */
+        .menu a:hover {
+            opacity: 0.5; /* محو شدن هنگام هاور */
+        }
+
+        /* نقطه بین آیتم‌ها */
+        .menu a::after {
+            content: "•"; /* نقطه */
+            color: rgb(150, 140, 0); /* رنگ نقطه */
+            margin-left: 30px; /* فاصله از متن */
+        }
+
+        /* حذف نقطه برای آخرین آیتم */
+        .menu a:last-child::after {
+            content: "";
+        }
+
+
+
+
+ /* استایل برای خط بالای نوشته */
+ .text-line {
+            width: 100px; /* عرض خط */
+            height: 6px; /* ضخامت خط */
+            background-color: rgb(150, 140, 0); /* رنگ خط */
+            margin-bottom:  10px; /* فاصله خط از نوشته */
+        }
+
+        /* استایل برای نوشته */
+        .left-text {
+            position: absolute;
+            top: 50%; /* وسط صفحه از نظر عمودی */
+            left: 10%; /* سمت چپ صفحه */
+            transform: translateY(-50%); /* برای تنظیم دقیق در مرکز */
+            color: white; /* رنگ متن */
+            font-size: 44px; /* اندازه فونت */
+            font-family: 'comicrelief-bold'; /* فونت خوانا */
+            text-align: left; /* متن به سمت چپ */
+            margin: 0; /* حذف فاصله پیش‌فرض بین پاراگراف‌ها */
+            line-height: 0.5; /* تنظیم فاصله بین خطوط */
+        }
+
 
 
 .search-icon {
@@ -19,11 +91,6 @@
         .search-icon:hover {
             transform: scale(1.2); /* بزرگ‌تر شدن هنگام هاور */
         }
-
-
-
-
-
 
 
 
@@ -47,8 +114,8 @@
 
         /* تغییر رنگ هنگام هاور */
         .contact-button:hover {
-            background-color: rgb(0, 0, 0); /* پس‌زمینه سفید */
-            color: rgb(255, 244, 244); /* رنگ متن سیاه */
+            background-color: rgb(255, 255, 255); /* پس‌زمینه سفید */
+            color: rgb(0, 0, 0); /* رنگ متن سیاه */
         }
  
 
@@ -124,6 +191,26 @@
 
         <body style="background-color:#0e0303dd;
 color:white;">
+
+
+ <!-- منو -->
+ <nav class="menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#service">Service</a>
+    <a href="#pages">Pages</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+
+  <!-- بخش نوشته -->
+  <div class="left-text">
+    <div class="text-line"></div>
+    <p> Custom Tailor </p>
+       <p>for Your Fashion</p> 
+        <p> Style Fit</p>
+</div>
+
 
 
   <!-- آیکون جستجو -->
