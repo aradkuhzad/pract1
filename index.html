@@ -2,10 +2,33 @@
 <html>
     <head>
 
+
+<title>vinch</title>
+
+
         <link href="ComicRelief-Bold.ttf" rel="stylesheet">
 
 
         <style>
+
+
+
+
+        /* استایل برای آیکون‌ها */
+        .social-icons {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 2; /* بالاتر از لایه نیمه‌شفاف */
+        }
+
+        .social-icons a img {
+            width: 30px;
+            height: 30px;
+        }
+
 
 
      /* استایل برای منوی اصلی */
@@ -57,35 +80,37 @@
  /* استایل برای خط بالای نوشته */
  .text-line {
             width: 100px; /* عرض خط */
-            height: 6px; /* ضخامت خط */
+            height: 4.8px; /* ضخامت خط */
             background-color: rgb(150, 140, 0); /* رنگ خط */
-            margin-bottom:  10px; /* فاصله خط از نوشته */
+            margin-bottom:  -20px; /* فاصله خط از نوشته */
         }
 
         /* استایل برای نوشته */
         .left-text {
             position: absolute;
-            top: 50%; /* وسط صفحه از نظر عمودی */
+            top: 60%; /* وسط صفحه از نظر عمودی */
             left: 10%; /* سمت چپ صفحه */
             transform: translateY(-50%); /* برای تنظیم دقیق در مرکز */
             color: white; /* رنگ متن */
-            font-size: 44px; /* اندازه فونت */
+            font-size: 64px; /* اندازه فونت */
             font-family: 'comicrelief-bold'; /* فونت خوانا */
             text-align: left; /* متن به سمت چپ */
             margin: 0; /* حذف فاصله پیش‌فرض بین پاراگراف‌ها */
             line-height: 0.5; /* تنظیم فاصله بین خطوط */
+            z-index: 2; /* بالاتر از تصویر پس‌زمینه */
         }
 
 
 
 .search-icon {
             position: absolute;
-            top: 35px; /* فاصله از بالای صفحه */
-            right: 250px; /* فاصله از سمت راست */
-            width: 27px; /* عرض آیکون */
-            height: 27px; /* ارتفاع آیکون */
+            top: 40px; /* فاصله از بالای صفحه */
+            right: 270px; /* فاصله از سمت راست */
+            width: 20.8px; /* عرض آیکون */
+            height: 20px; /* ارتفاع آیکون */
             cursor: pointer; /* نشانگر ماوس به حالت کلیک تغییر می‌کند */
             transition: transform 0.3s ease; /* انیمیشن هنگام هاور */
+            z-index: 2; /* بالاتر از تصویر پس‌زمینه */
         }
 
         .search-icon:hover {
@@ -101,15 +126,17 @@
             top: 30px; /* فاصله از بالای صفحه */
             right: 100px; /* فاصله از سمت راست */
             padding: 10px 20px; /* فاصله داخلی */
-            border: 2px solid white; /* حاشیه */
-            border-radius: 25px; /* گرد کردن گوشه‌ها */
+            border: 1px solid white; /* حاشیه */
+            border-radius: 40px; /* گرد کردن گوشه‌ها */
             background-color: transparent; /* پس‌زمینه شفاف */
             color: white; /* رنگ متن */
-            font-size: 16px; /* اندازه فونت */
+            font-size: 15px; /* اندازه فونت */
+            text-align: center; /* متن در مرکز */
             font-family: Arial, sans-serif; /* فونت */
             text-decoration: none; /* حذف خط زیر متن */
-            text-align: center; /* متن در مرکز */
             transition: all 0.3s ease; /* انیمیشن تغییر رنگ */
+            width: 105px; 
+            height: 23px; 
         }
 
         /* تغییر رنگ هنگام هاور */
@@ -122,22 +149,23 @@
 
             .social-icons {
                 position: absolute;
-                top: 35px; /* فاصله از بالای صفحه */
+                top: 40px; /* فاصله از بالای صفحه */
                left: 200px; /* فاصله از سمت راست */
                 display: flex;
-                gap: 25px; /* فاصله بین آیکون‌ها */
+                gap: 30px; /* فاصله بین آیکون‌ها */
             }
     
             .social-icons a img {
-                width: 30px; /* عرض آیکون */
-                height: 30px; /* ارتفاع آیکون */
+                width: 18px; /* عرض آیکون */
+                height: 18px; /* ارتفاع آیکون */
             }
 
         .social-icons a img:hover {
             filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(500%) hue-rotate(200deg);
         }
 
-
+        .social-icons a img {transition: all 0.3s ease
+        }
 
         
 
@@ -150,14 +178,17 @@
                   top: 100px;
                   left: 0;
                   opacity: 0.1;
+                  z-index: 2; /* بالاتر از تصویر پس‌زمینه */
                 
                 }
 
                 .logo {
             position: absolute;
             top: 20px; /* فاصله از بالای صفحه */
-            left: 44%; /* فاصله از سمت چپ */
-            width: 200px; /* عرض لوگو */
+            left: 50%; /* فاصله از سمت چپ */
+            transform: translateX(-50%); /* تنظیم دقیق لوگو در مرکز */
+            z-index: 2; /* بالاتر از تصویر پس‌زمینه */
+            width: 150px; /* عرض لوگو */
             height: auto; /* ارتفاع متناسب با عرض */
         }
             
@@ -167,14 +198,22 @@
                 width: 1520px; /* باید با عرض تصویر اول برابر باشد */
                 height: 700px; /* باید با ارتفاع تصویر اول برابر باشد */
               }
-        
-              /* استایل برای تصویر اول */
-              .background-image {
+
+
+                /* استایل برای تصویر اول */
+   .background-image {
                 width: 100%;
                 height: 100%;
-                opacity: 0.8; /* شفافیت */
-                filter: brightness(20%);
-              }
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0; /* تصویر زیر همه عناصر قرار می‌گیرد */
+               filter: brightness(20%); /* کاهش روشنایی تصویر */
+               opacity: 0.5;
+             }
+
+        
+           
         
               /* استایل برای تصویر دوم */
               .overlay-image {
@@ -192,6 +231,7 @@
 
         <body style="background-color:#0e0303dd;
 color:white;">
+
 
 
  <!-- منو -->
@@ -228,16 +268,16 @@ color:white;">
 
     <!-- آیکون‌های شبکه‌های اجتماعی -->
     <div class="social-icons">
-        <a href="www.youtube.com/@StichcraftStudio-tailor" target="_blank">
+        <a href="https://youtube.com/@stichcraftstudio-tailor?si=VAm8S1fYPwxqS25t" target="_blank">
             <img src="youtube.png" alt="YouTube">
         </a>
-        <a href="www.youtube.com/@StichcraftStudio-tailor" target="_blank">
+        <a href="https://youtube.com/@stichcraftstudio-tailor?si=VAm8S1fYPwxqS25t" target="_blank">
             <img src="instagram.png" alt="Instagram">
         </a>
-        <a href="www.youtube.com/@StichcraftStudio-tailor" target="_blank">
+        <a href="https://youtube.com/@stichcraftstudio-tailor?si=VAm8S1fYPwxqS25t" target="_blank">
             <img src="twitter.png" alt="Twitter">
         </a>
-        <a href="www.youtube.com/@StichcraftStudio-tailor" target="_blank">
+        <a href="https://youtube.com/@stichcraftstudio-tailor?si=VAm8S1fYPwxqS25t" target="_blank">
             <img src="facebook.png" alt="Facebook">
         </a>
     </div>
