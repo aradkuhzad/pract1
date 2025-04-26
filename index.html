@@ -6,11 +6,21 @@
 <title>vinch</title>
 
 
-        <link href="ComicRelief-Bold.ttf" rel="stylesheet">
+
 
 
         <style>
 
+
+
+
+/* استایل برای خط بالای نوشته */
+.text-line {
+            width: 80px; /* عرض خط */
+            height: 4.8px; /* ضخامت خط */
+            background-color: #b57f00; /* رنگ خط */
+            margin-bottom:  -20px; /* فاصله خط از نوشته */
+        }
 
 
 
@@ -74,31 +84,6 @@
             content: "";
         }
 
-
-
-
- /* استایل برای خط بالای نوشته */
- .text-line {
-            width: 100px; /* عرض خط */
-            height: 4.8px; /* ضخامت خط */
-            background-color: rgb(150, 140, 0); /* رنگ خط */
-            margin-bottom:  -20px; /* فاصله خط از نوشته */
-        }
-
-        /* استایل برای نوشته */
-        .left-text {
-            position: absolute;
-            top: 60%; /* وسط صفحه از نظر عمودی */
-            left: 10%; /* سمت چپ صفحه */
-            transform: translateY(-50%); /* برای تنظیم دقیق در مرکز */
-            color: white; /* رنگ متن */
-            font-size: 64px; /* اندازه فونت */
-            font-family: 'comicrelief-bold'; /* فونت خوانا */
-            text-align: left; /* متن به سمت چپ */
-            margin: 0; /* حذف فاصله پیش‌فرض بین پاراگراف‌ها */
-            line-height: 0.5; /* تنظیم فاصله بین خطوط */
-            z-index: 2; /* بالاتر از تصویر پس‌زمینه */
-        }
 
 
 
@@ -167,6 +152,16 @@
         .social-icons a img {transition: all 0.3s ease
         }
 
+
+
+
+
+
+
+
+
+
+
         
 
             
@@ -191,6 +186,12 @@
             width: 150px; /* عرض لوگو */
             height: auto; /* ارتفاع متناسب با عرض */
         }
+
+
+
+
+
+
             
               /* استایل برای والد */
               .image-container {
@@ -203,7 +204,7 @@
                 /* استایل برای تصویر اول */
    .background-image {
                 width: 100%;
-                height: 100%;
+                height: 120%;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -218,12 +219,32 @@
               /* استایل برای تصویر دوم */
               .overlay-image {
                 position: absolute;
-                top: 430px; /* موقعیت عمودی تصویر دوم */
+                top: 526px; /* موقعیت عمودی تصویر دوم */
                 left: 50%; /* موقعیت افقی تصویر دوم */
                 transform: translate(-50%, -50%); /* برای قرار دادن دقیق در مرکز */
-                width: 360px; /* عرض دلخواه */
+                width: 420px; /* عرض دلخواه */
                 height: auto; /* ارتفاع متناسب با عرض */
               }
+
+
+/* استایل برای نوشته */
+.left-text {
+            position: absolute;
+            top: 62%; /* وسط صفحه از نظر عمودی */
+            left: 10%; /* سمت چپ صفحه */
+            transform: translateY(-50%); /* برای تنظیم دقیق در مرکز */
+            color: white; /* رنگ متن */
+            font-size: 64px; /* اندازه فونت */
+            font-family: 'comicrelief-bold'; /* فونت خوانا */
+            text-align: left; /* متن به سمت چپ */
+            margin: 0; /* حذف فاصله پیش‌فرض بین پاراگراف‌ها */
+            line-height: 0.2; /* تنظیم فاصله بین خطوط */
+            z-index: 2; /* بالاتر از تصویر پس‌زمینه */
+
+
+
+
+
             </style>
 
           </head>
@@ -301,13 +322,6 @@ color:white;">
     <body style="background-color: #0e0303dd; color: rgb(0, 0, 0);">
 
  <!-- دکمه تماس -->
- <a href="#contact" class="contact-button">Contact Us</a>
-
-
-
-
-        </body>
-       
-
-    
+<a href="#contact" class="contact-button">Contact Us</a>
+</body>
 </html>
