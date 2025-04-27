@@ -2,12 +2,29 @@
 <html>
     <head>
 
+     
+
+
+
 
 <title>vinch</title>
 
 
 
         <style>
+
+
+  body {
+            margin: 0;
+            padding: 0;
+            background-color: #0e0303dd;
+            color: white;
+            font-family: Arial, sans-serif;
+            width: 100vw; /* عرض صفحه برابر با عرض نمایشگر */
+            height: 100vh; /* ارتفاع صفحه برابر با ارتفاع نمایشگر */
+            overflow-x: hidden; /* جلوگیری از اسکرول افقی */
+        }
+
 
 
 
@@ -240,7 +257,30 @@
 }
 
 
+  /* مدیا کوئری برای صفحه‌های بزرگ‌تر */
+  @media (min-width: 1200px) {
+            .menu a {
+                font-size: 1vw; /* کاهش اندازه فونت برای صفحه‌های بزرگ‌تر */
+            }
 
+        
+            .contact-button {
+                font-size: 1vw;
+                padding: 0.8vw 1.5vw;
+            }
+
+            .social-icons a img {
+                width: 1.5vw;
+                height: 1.5vw;
+            }
+        }
+
+
+
+
+
+
+ 
             </style>
 
           </head>
@@ -318,5 +358,9 @@ color:white;">
 
  <!-- دکمه تماس -->
 <a href="#contact" class="contact-button">Contact Us</a>
+
+
+
+
 </body>
 </html>
