@@ -7,10 +7,7 @@
 
 
 
-
-
         <style>
-
 
 
 
@@ -53,19 +50,25 @@
             align-items: center;
             gap: 30px; /* فاصله بین آیتم‌ها */
             padding: 10px 0; /* فاصله داخلی */
+            letter-spacing: 5px; /* فاصله بین حروف */
             margin-top: 50px; /* فاصله از بالای صفحه */
+
         }
 
         /* استایل برای آیتم‌های منو */
         .menu a {
             text-decoration: none; /* حذف خط زیر لینک‌ها */
             color: white; /* رنگ متن */
-            font-size: 16px; /* اندازه فونت */
-            font-family: Arial, sans-serif; /* فونت خوانا */
+            font-size: 15px; /* اندازه فونت */
+            font-family: 'menofont',sans-serif; /* فونت خوانا */
             text-transform: uppercase; /* حروف بزرگ */
             position: relative; /* برای افکت هاور */
             transition: opacity 0.3s ease; /* انیمیشن محو شدن */
         }
+        @font-face {
+    font-family: 'menufont'; /* نام دلخواه برای فونت */
+    src: url('UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7') format('woff2'); /* مسیر فایل فونت */
+}
 
         /* افکت هاور */
         .menu a:hover {
@@ -74,9 +77,11 @@
 
         /* نقطه بین آیتم‌ها */
         .menu a::after {
-            content: "•"; /* نقطه */
+            content: "■ "; /* نقطه */
+            font-size: 12px; /* اندازه نقطه */
             color: rgb(150, 140, 0); /* رنگ نقطه */
-            margin-left: 30px; /* فاصله از متن */
+            margin-right: 5px; /* فاصله از متن */
+            margin-left: 20px;
         }
 
         /* حذف نقطه برای آخرین آیتم */
@@ -155,15 +160,6 @@
 
 
 
-
-
-
-
-
-
-
-        
-
             
                 .top-line {
                   width: 100%;
@@ -186,9 +182,6 @@
             width: 150px; /* عرض لوگو */
             height: auto; /* ارتفاع متناسب با عرض */
         }
-
-
-
 
 
 
@@ -231,17 +224,20 @@
 .left-text {
             position: absolute;
             top: 62%; /* وسط صفحه از نظر عمودی */
-            left: 10%; /* سمت چپ صفحه */
+            left: 12%; /* سمت چپ صفحه */
             transform: translateY(-50%); /* برای تنظیم دقیق در مرکز */
             color: white; /* رنگ متن */
-            font-size: 64px; /* اندازه فونت */
-            font-family: 'comicrelief-bold'; /* فونت خوانا */
+            font-size: 60px; /* اندازه فونت */
+            font-family: 'CustomFont', sans-serif; /* فونت خوانا */
             text-align: left; /* متن به سمت چپ */
             margin: 0; /* حذف فاصله پیش‌فرض بین پاراگراف‌ها */
             line-height: 0.2; /* تنظیم فاصله بین خطوط */
             z-index: 2; /* بالاتر از تصویر پس‌زمینه */
-
-
+        }
+        @font-face {
+    font-family: 'CustomFont'; /* نام دلخواه برای فونت */
+    src: url('wEO_EBrOk8hQLDvIAF81VvoK.woff2') format('woff2'); /* مسیر فایل فونت */
+}
 
 
 
@@ -252,7 +248,6 @@
 
         <body style="background-color:#0e0303dd;
 color:white;">
-
 
 
  <!-- منو -->
