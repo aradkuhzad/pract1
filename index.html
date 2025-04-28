@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html>
 
-<title>vinch</title>
+<title>Vinch-Professional tailoring </title>
 
 <!-- لینک به Favicon -->
-<link rel="icon" type="" href="ic13.jpg"
+<link rel="icon" type="" href="wlogo.png"
 
 
 <head>
-       
 
-        <style>
+  
+
+      <style>
 
 
-  body {
+
+
+
+/* استایل برای آیکون کنار Contact */
+.contact-link {
+    display: inline-flex; /* برای قرار دادن متن و آیکون در یک خط */
+    align-items: center; /* تنظیم عمودی متن و آیکون */
+    gap: 5px; /* فاصله بین متن و آیکون */
+}
+
+.contact-icon {
+    width: 25px; /* عرض آیکون */
+    height: 25px; /* ارتفاع آیکون */
+    vertical-align: middle; /* تنظیم عمودی آیکون */
+}
+
+
+
+
+
+body {
             margin: 0;
             padding: 0;
             background-color: #0e0303dd;
@@ -29,9 +50,9 @@
 
 /* استایل برای خط بالای نوشته */
 .text-line {
-            width: 80px; /* عرض خط */
+            width: 90px; /* عرض خط */
             height: 4.8px; /* ضخامت خط */
-            background-color: #b57f00; /* رنگ خط */
+            background-color: #c09d4b; /* رنگ خط */
             margin-bottom:  -20px; /* فاصله خط از نوشته */
         }
 
@@ -95,7 +116,7 @@
         .menu a::after {
             content: "■ "; /* نقطه */
             font-size: 12px; /* اندازه نقطه */
-            color: rgb(150, 140, 0); /* رنگ نقطه */
+            color:#c09d4b ; /* رنگ نقطه */
             margin-right: 5px; /* فاصله از متن */
             margin-left: 26px;
         }
@@ -104,14 +125,14 @@
         .menu a:last-child::after {
             content: "";
         }
-
+       
 
 
 
 .search-icon {
             position: absolute;
             top: 40px; /* فاصله از بالای صفحه */
-            right: 270px; /* فاصله از سمت راست */
+            right: 340px; /* فاصله از سمت راست */
             width: 20.8px; /* عرض آیکون */
             height: 20px; /* ارتفاع آیکون */
             cursor: pointer; /* نشانگر ماوس به حالت کلیک تغییر می‌کند */
@@ -129,20 +150,21 @@
         /* استایل دکمه */
         .contact-button {
             position: absolute;
-            top: 30px; /* فاصله از بالای صفحه */
-            right: 100px; /* فاصله از سمت راست */
-            padding: 10px 20px; /* فاصله داخلی */
-            border: 1px solid white; /* حاشیه */
+            top: 20px; /* فاصله از بالای صفحه */
+            right: 160px; /* فاصله از سمت راست */
+            padding: 0px 20px; /* فاصله داخلی */
+            border: 1.5px solid white; /* حاشیه */
             border-radius: 40px; /* گرد کردن گوشه‌ها */
             background-color: transparent; /* پس‌زمینه شفاف */
             color: white; /* رنگ متن */
-            font-size: 15px; /* اندازه فونت */
+            font-size: 16px; /* اندازه فونت */
             text-align: center; /* متن در مرکز */
-            font-family: Arial, sans-serif; /* فونت */
+            font-family: 'CustomFont', sans-serif; /* فونت */
             text-decoration: none; /* حذف خط زیر متن */
             transition: all 0.3s ease; /* انیمیشن تغییر رنگ */
             width: 105px; 
-            height: 23px; 
+            height: 55px; 
+            line-height: 55px;
         }
 
         /* تغییر رنگ هنگام هاور */
@@ -156,7 +178,7 @@
             .social-icons {
                 position: absolute;
                 top: 40px; /* فاصله از بالای صفحه */
-               left: 200px; /* فاصله از سمت راست */
+               left: 171px; /* فاصله از سمت راست */
                 display: flex;
                 gap: 30px; /* فاصله بین آیکون‌ها */
             }
@@ -195,7 +217,7 @@
             left: 50%; /* فاصله از سمت چپ */
             transform: translateX(-50%); /* تنظیم دقیق لوگو در مرکز */
             z-index: 2; /* بالاتر از تصویر پس‌زمینه */
-            width: 150px; /* عرض لوگو */
+            width: 165px; /* عرض لوگو */
             height: auto; /* ارتفاع متناسب با عرض */
         }
 
@@ -232,6 +254,7 @@
                 left: 50%; /* موقعیت افقی تصویر دوم */
                 transform: translate(-50%, -50%); /* برای قرار دادن دقیق در مرکز */
                 width: 420px; /* عرض دلخواه */
+                height: 446px;
                 height: auto; /* ارتفاع متناسب با عرض */
               }
 
@@ -256,28 +279,7 @@
 }
 
 
-  /* مدیا کوئری برای صفحه‌های بزرگ‌تر */
-  @media (min-width: 1200px) {
-            .menu a {
-                font-size: 1vw; /* کاهش اندازه فونت برای صفحه‌های بزرگ‌تر */
-            }
-
-        
-            .contact-button {
-                font-size: 1vw;
-                padding: 0.8vw 1.5vw;
-            }
-
-            .social-icons a img {
-                width: 1.5vw;
-                height: 1.5vw;
-            }
-        }
-
-
-
-
-
+  
 
  
             </style>
@@ -289,12 +291,18 @@
 color:white;">
 
 
+
+
+
+
  <!-- منو -->
  <nav class="menu">
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#service">Service</a>
-    <a href="#pages">Pages</a>
+    <a href="#pages " class="contact-link">Pages
+        <img src="angle-small-down (1).png" alt="Arrow" class="contact-icon">
+    </a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -323,18 +331,25 @@ color:white;">
 
     <!-- آیکون‌های شبکه‌های اجتماعی -->
     <div class="social-icons">
+
         <a href="https://youtube.com/@stichcraftstudio-tailor?si=VAm8S1fYPwxqS25t" target="_blank">
-            <img src="youtube2.png" alt="YouTube">
+            <img src="facebook-i1.png" alt="Facebook">
         </a>
-        <a href="https://youtube.com/@stichcraftstudio-tailor?si=VAm8S1fYPwxqS25t" target="_blank">
-            <img src="instagram5.png" alt="Instagram">
-        </a>
+
         <a href="https://youtube.com/@stichcraftstudio-tailor?si=VAm8S1fYPwxqS25t" target="_blank">
             <img src="twitter3.png" alt="Twitter">
         </a>
+
         <a href="https://youtube.com/@stichcraftstudio-tailor?si=VAm8S1fYPwxqS25t" target="_blank">
-            <img src="facebook4.png" alt="Facebook">
+            <img src="instagram5.png" alt="Instagram">
         </a>
+
+        <a href="https://youtube.com/@stichcraftstudio-tailor?si=VAm8S1fYPwxqS25t" target="_blank">
+            <img src="linkedin.png" alt="YouTube">
+        </a>
+       
+       
+       
     </div>
 
 
