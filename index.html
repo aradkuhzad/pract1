@@ -8,14 +8,46 @@
 
 
 <head>
-
-  
-
       <style>
 
+body {
+            margin: 0;
+            padding: 0;
+            background-color: #0e0303dd;
+            color: white;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+           
+        }
+
+  
+        .images-container {
+            position: absolute;
+            bottom: 100px; /* فاصله از پایین صفحه */
+            right: 160px; /* فاصله از سمت چپ صفحه */
+            display: flex;
+            gap: 20px; /* فاصله بین تصاویر */
+            z-index: 2;
+        }
 
 
+        .images-container .left-image {
+            width: 110px; /* عرض تصویر سمت چپ */
+            height: 180px; /* ارتفاع تصویر سمت چپ */
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* سایه برای تصویر */
+        }
 
+        .images-container .right-image {
+            width: 240px; /* عرض تصویر سمت راست */ 
+            height: 180px; /* ارتفاع تصویر سمت راست */
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* سایه برای تصویر */
+        }
+        
+
+
+       
 
 /* استایل برای آیکون کنار Contact */
 .contact-link {
@@ -32,18 +64,6 @@
 
 
 
-
-
-body {
-            margin: 0;
-            padding: 0;
-            background-color: #0e0303dd;
-            color: white;
-            font-family: Arial, sans-serif;
-            width: 100vw; /* عرض صفحه برابر با عرض نمایشگر */
-            height: 100vh; /* ارتفاع صفحه برابر با ارتفاع نمایشگر */
-            overflow-x: hidden; /* جلوگیری از اسکرول افقی */
-        }
 
 
 
@@ -291,7 +311,10 @@ body {
 color:white;">
 
 
-
+<div class="images-container">
+    <img src="download12.jpg" alt="Image 1"  class="left-image">
+    <img src="download54.jpg" alt="Image 2"  class="right-image">
+</div>
 
 
 
