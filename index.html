@@ -10,44 +10,82 @@
 <head>
       <style>
 
-body {
-            margin: 0;
-            padding: 0;
-            background-color: #0e0303dd;
-            color: white;
-            font-family: Arial, sans-serif;
-            height: 100vh;
-           
-        }
-
-  
-        .images-container {
-            position: absolute;
-            bottom: 100px; /* فاصله از پایین صفحه */
-            right: 160px; /* فاصله از سمت چپ صفحه */
-            display: flex;
-            gap: 20px; /* فاصله بین تصاویر */
-            z-index: 2;
-        }
 
 
-        .images-container .left-image {
-            width: 110px; /* عرض تصویر سمت چپ */
-            height: 180px; /* ارتفاع تصویر سمت چپ */
-            object-fit: cover;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* سایه برای تصویر */
-        }
 
-        .images-container .right-image {
-            width: 240px; /* عرض تصویر سمت راست */ 
-            height: 180px; /* ارتفاع تصویر سمت راست */
-            object-fit: cover;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* سایه برای تصویر */
-        }
-        
+.custom-section {
+    position: absolute;
+    bottom: 20px; /* فاصله از پایین صفحه */
+    right: 20px; /* فاصله از سمت راست صفحه */
+    display: flex;
+    flex-direction: column; /* قرار دادن متن و لینک زیر تصاویر */
+    align-items: center; /* متن و لینک در مرکز تصاویر */
+    gap: 15px; /* فاصله بین عناصر */
+    z-index: 2; /* بالاتر از سایر عناصر */
+}
+
+.images-container {
+    display: flex;
+    gap: 10px; /* فاصله بین تصاویر */
+}
+
+.images-container img {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* سایه برای تصاویر */
+}
+
+.left-image {
+    width: 150px; /* عرض تصویر سمت چپ */
+    height: 200px; /* ارتفاع تصویر سمت چپ */
+    object-fit: cover;
+}
+
+.right-image {
+    width: 284px; /* عرض تصویر سمت راست */
+    height: 224px; /* ارتفاع تصویر سمت راست */
+    object-fit: cover;
+}
+
+.text-container {
+    font-size: 14px; /* اندازه متن */
+    color: white; /* رنگ متن */
+    text-align: center; /* متن در مرکز */
+    max-width: 300px; /* عرض محدود برای متن */
+    line-height: 1.6; /* فاصله بین خطوط متن */
+}
+
+.text-container p {
+   color: #979899; /* رنگ متن
+    }
 
 
-       
+.appointment-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* فاصله بین متن و فلش */
+    font-size: 16px; /* اندازه متن لینک */
+    font-weight: bold;
+    color: white; /* رنگ متن لینک */
+    text-decoration: none; /* حذف خط زیر لینک */
+    transition: transform 0.3s ease; /* انیمیشن حرکت */
+}
+
+.appointment-link:hover {
+    transform: translateX(10px); /* حرکت به سمت راست هنگام هاور */
+}
+
+.appointment-link .arrow {
+    font-size: 20px; /* اندازه فلش */
+    transition: transform 0.3s ease; /* انیمیشن حرکت فلش */
+}
+
+.appointment-link:hover .arrow {
+    transform: translateX(5px); /* حرکت فلش به سمت راست هنگام هاور */
+}
+
+
+
+
+
 
 /* استایل برای آیکون کنار Contact */
 .contact-link {
@@ -66,13 +104,11 @@ body {
 
 
 
-
-
 /* استایل برای خط بالای نوشته */
 .text-line {
             width: 90px; /* عرض خط */
             height: 4.8px; /* ضخامت خط */
-            background-color: #c09d4b; /* رنگ خط */
+            background-color: #EBA552;/* رنگ خط */
             margin-bottom:  -20px; /* فاصله خط از نوشته */
         }
 
@@ -224,7 +260,7 @@ body {
                   height: 2px; /* ضخامت خط */
                   background-color: white; /* رنگ خط */
                   position: absolute;
-                  top: 100px;
+                  top: 100px; /* فاصله از بالای صفحه */
                   left: 0;
                   opacity: 0.1;
                   z-index: 2; /* بالاتر از تصویر پس‌زمینه */
@@ -311,10 +347,22 @@ body {
 color:white;">
 
 
-<div class="images-container">
-    <img src="download12.jpg" alt="Image 1"  class="left-image">
-    <img src="download54.jpg" alt="Image 2"  class="right-image">
+
+<div class="custom-section">
+    <div class="images-container">
+        <img src="download12.jpg" alt="Image 1" class="left-image">
+        <img src="download54.jpg" alt="Image 2" class="right-image">
+    </div>
+    <div class="text-container">
+        <p>Customize your outfit to match your style.</p>
+        <p>Perfectly made with high quality materials and equipment.</p>
+    </div>
+    <a href="#appointment" class="appointment-link">
+        Make Appointment
+        <span class="arrow">→</span>
+    </a>
 </div>
+
 
 
 
@@ -371,7 +419,7 @@ color:white;">
             <img src="linkedin.png" alt="YouTube">
         </a>
        
-       
+    
        
     </div>
 
