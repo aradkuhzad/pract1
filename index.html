@@ -11,6 +11,57 @@
       <style>
 
 
+
+
+
+body {
+    overflow-x: hidden; /* غیرفعال کردن اسکرول افقی */
+}
+
+
+
+.svg-container {
+    position: absolute;
+    bottom: -90px; /* فاصله از پایین صفحه */
+    left: 480px; /* فاصله از سمت چپ صفحه */
+    z-index: 3; /* بالاتر از سایر عناصر */
+    width: 150px; /* عرض SVG */
+    height: 150px; /* ارتفاع SVG */
+}
+
+
+.svg-container svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.center-icon {
+    position: absolute;
+    top: 50%; /* قرار دادن در مرکز عمودی */
+    left: 50%; /* قرار دادن در مرکز افقی */
+    transform: translate(-50%, -50%); /* تنظیم دقیق مرکز */
+    width: 22px; /* عرض آیکون */
+    height: 22px; /* ارتفاع آیکون */
+}
+
+
+.svg-container text {
+    font-size: 11px; /* کاهش اندازه فونت متن */
+    fill: white; /* رنگ متن */
+    word-spacing: 10px; 
+}
+  
+.svg-container font{
+    font-family: 'menofont',sans-serif; /* فونت خوانا */
+}
+
+
+
+
 .images-and-text {
     display: flex; /* قرار دادن تصاویر و متن در یک خط */
     align-items: center; /* تنظیم عمودی متن و تصاویر */
@@ -19,8 +70,8 @@
 
 .custom-section {
     position: absolute; 
-    right: 170px; /* فاصله از سمت راست صفحه */
-    bottom: -80px; /* فاصله پایین */
+    right: 160px; /* فاصله از سمت راست صفحه */
+    bottom: -70px; /* فاصله پایین */
     display: flex;
     flex-direction: column; /* قرار دادن متن و لینک زیر تصاویر */
     align-items: left; /* متن و لینک در مرکز تصاویر */
@@ -316,10 +367,10 @@
               /* استایل برای تصویر دوم */
               .overlay-image {
                 position: absolute;
-                top: 526px; /* موقعیت عمودی تصویر دوم */
+                top: 518px; /* موقعیت عمودی تصویر دوم */
                 left: 50%; /* موقعیت افقی تصویر دوم */
                 transform: translate(-50%, -50%); /* برای قرار دادن دقیق در مرکز */
-                width: 420px; /* عرض دلخواه */
+                width: 430px; /* عرض دلخواه */
                 height: 446px;
                 height: auto; /* ارتفاع متناسب با عرض */
               }
@@ -355,6 +406,25 @@
 
         <body style="background-color:#0e0303dd;
 color:white;">
+
+
+<div class="svg-container">
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <!-- تعریف مسیر دایره -->
+        <defs>
+            <path id="circlePath" d="M 75,75 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0" />
+        </defs>
+
+        <!-- متن دایره‌ای -->
+        <text fill="white" font-size="12" font-family="Arial"  text-anchor="middle">
+            <textPath href="#circlePath" startOffset="50%">
+                PLAY VIDEO • PLAY VIDEO • PLAY VIDEO • 
+            </textPath>
+        </text>
+    </svg>
+      <!-- آیکون در مرکز -->
+      <img src="play12.png" alt="Play Icon" class="center-icon">
+</div>
 
 
 
