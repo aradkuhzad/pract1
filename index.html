@@ -11,22 +11,26 @@
       <style>
 
 
-
+.images-and-text {
+    display: flex; /* قرار دادن تصاویر و متن در یک خط */
+    align-items: center; /* تنظیم عمودی متن و تصاویر */
+    gap: 20px; /* فاصله بین تصاویر و متن */
+}
 
 .custom-section {
-    position: absolute;
-    bottom: 20px; /* فاصله از پایین صفحه */
-    right: 20px; /* فاصله از سمت راست صفحه */
+    position: absolute; 
+    right: 170px; /* فاصله از سمت راست صفحه */
+    bottom: -80px; /* فاصله پایین */
     display: flex;
     flex-direction: column; /* قرار دادن متن و لینک زیر تصاویر */
-    align-items: center; /* متن و لینک در مرکز تصاویر */
-    gap: 15px; /* فاصله بین عناصر */
+    align-items: left; /* متن و لینک در مرکز تصاویر */
+    gap: 10px; /* فاصله بین عناصر */
     z-index: 2; /* بالاتر از سایر عناصر */
 }
 
 .images-container {
     display: flex;
-    gap: 10px; /* فاصله بین تصاویر */
+    gap: 20px; /* فاصله بین تصاویر */
 }
 
 .images-container img {
@@ -34,39 +38,45 @@
 }
 
 .left-image {
-    width: 150px; /* عرض تصویر سمت چپ */
-    height: 200px; /* ارتفاع تصویر سمت چپ */
+    width: 110px; /* عرض تصویر سمت چپ */
+    height: 180px; /* ارتفاع تصویر سمت چپ */
     object-fit: cover;
 }
 
 .right-image {
-    width: 284px; /* عرض تصویر سمت راست */
-    height: 224px; /* ارتفاع تصویر سمت راست */
+    width: 210px; /* عرض تصویر سمت راست */
+    height: 180px; /* ارتفاع تصویر سمت راست */
     object-fit: cover;
 }
 
-.text-container {
-    font-size: 14px; /* اندازه متن */
-    color: white; /* رنگ متن */
-    text-align: center; /* متن در مرکز */
-    max-width: 300px; /* عرض محدود برای متن */
-    line-height: 1.6; /* فاصله بین خطوط متن */
-}
 
 .text-container p {
-   color: #979899; /* رنگ متن
-    }
+     color: #989999;
+     text-align: left;
+}
+
+.text-container {
+    font-size: 17.5px; /* اندازه متن */
+    color: white; /* رنگ متن */
+    max-width: 300px; /* عرض محدود برای متن */
+    line-height: 0.9; /* فاصله بین خطوط متن */
+    font-family: 'menofont',sans-serif; /* فونت خوانا */
+    text-align: left; /* متن به سمت چپ */
+}
 
 
 .appointment-link {
-    display: inline-flex;
-    align-items: center;
+    display: flex;
+    justify-content: flex-start; /* متن و فلش در سمت چپ */
+    align-items: center; /* تنظیم عمودی متن و فلش */
     gap: 10px; /* فاصله بین متن و فلش */
-    font-size: 16px; /* اندازه متن لینک */
-    font-weight: bold;
+    font-size: 18px; /* اندازه متن لینک */
+    font-weight: bold; /* ضخیم کردن متن */
     color: white; /* رنگ متن لینک */
     text-decoration: none; /* حذف خط زیر لینک */
     transition: transform 0.3s ease; /* انیمیشن حرکت */
+    font-family: 'CustomFont', sans-serif;
+
 }
 
 .appointment-link:hover {
@@ -354,10 +364,11 @@ color:white;">
         <img src="download54.jpg" alt="Image 2" class="right-image">
     </div>
     <div class="text-container">
-        <p>Customize your outfit to match your style.</p>
-        <p>Perfectly made with high quality materials and equipment.</p>
+        <p> Customize your outfit to match your</p>
+           <p> style. Perfectly made with high quality</p>
+             <p> materials and equipment.</p>
     </div>
-    <a href="#appointment" class="appointment-link">
+    <a href="https://youtube.com/@stichcraftstudio-tailor?si=VAm8S1fYPwxqS25t" class="appointment-link">
         Make Appointment
         <span class="arrow">→</span>
     </a>
