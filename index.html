@@ -20,6 +20,7 @@ body {
 
 
 
+
 .svg-container {
     position: absolute;
     bottom: -90px; /* فاصله از پایین صفحه */
@@ -36,7 +37,14 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.3s ease; /* انیمیشن هنگام هاور */
 }
+
+
+.svg-container:hover svg{
+    transform: scale(1.1) rotate(10deg); /* بزرگ‌تر شدن و چرخش هنگام هاور */
+}
+
 
 
 .center-icon {
@@ -46,6 +54,7 @@ body {
     transform: translate(-50%, -50%); /* تنظیم دقیق مرکز */
     width: 22px; /* عرض آیکون */
     height: 22px; /* ارتفاع آیکون */
+    transition: none; /* غیرفعال کردن انیمیشن */
 }
 
 
@@ -414,11 +423,11 @@ color:white;">
         <defs>
             <path id="circlePath" d="M 75,75 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0" />
         </defs>
-
         <!-- متن دایره‌ای -->
         <text fill="white" font-size="12" font-family="Arial"  text-anchor="middle">
             <textPath href="#circlePath" startOffset="50%">
                 PLAY VIDEO • PLAY VIDEO • PLAY VIDEO • 
+                
             </textPath>
         </text>
     </svg>
