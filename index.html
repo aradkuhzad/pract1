@@ -24,7 +24,7 @@ body {
 .svg-container {
     position: absolute;
     bottom: -90px; /* فاصله از پایین صفحه */
-    left: 480px; /* فاصله از سمت چپ صفحه */
+    left: 470px; /* فاصله از سمت چپ صفحه */
     z-index: 3; /* بالاتر از سایر عناصر */
     width: 150px; /* عرض SVG */
     height: 150px; /* ارتفاع SVG */
@@ -61,7 +61,8 @@ body {
 .svg-container text {
     font-size: 11px; /* کاهش اندازه فونت متن */
     fill: white; /* رنگ متن */
-    word-spacing: 10px; 
+    word-spacing: 10px; /* فاصله بین کلمات */ 
+    font-weight: 700; /* ضخیم کردن متن */
 }
   
 .svg-container font{
@@ -80,7 +81,7 @@ body {
 .custom-section {
     position: absolute; 
     right: 160px; /* فاصله از سمت راست صفحه */
-    bottom: -70px; /* فاصله پایین */
+    bottom: -59px; /* فاصله پایین */
     display: flex;
     flex-direction: column; /* قرار دادن متن و لینک زیر تصاویر */
     align-items: left; /* متن و لینک در مرکز تصاویر */
@@ -104,7 +105,7 @@ body {
 }
 
 .right-image {
-    width: 210px; /* عرض تصویر سمت راست */
+    width: 230px; /* عرض تصویر سمت راست */
     height: 180px; /* ارتفاع تصویر سمت راست */
     object-fit: cover;
 }
@@ -116,12 +117,13 @@ body {
 }
 
 .text-container {
-    font-size: 17.5px; /* اندازه متن */
+    font-size: 18.9px; /* اندازه متن */
     color: white; /* رنگ متن */
-    max-width: 300px; /* عرض محدود برای متن */
-    line-height: 0.9; /* فاصله بین خطوط متن */
+    max-width: 400px; /* عرض محدود برای متن */
+    line-height: 0.7; /* فاصله بین خطوط متن */
     font-family: 'menofont',sans-serif; /* فونت خوانا */
     text-align: left; /* متن به سمت چپ */
+
 }
 
 
@@ -179,7 +181,7 @@ body {
             width: 90px; /* عرض خط */
             height: 4.8px; /* ضخامت خط */
             background-color: #EBA552;/* رنگ خط */
-            margin-bottom:  -20px; /* فاصله خط از نوشته */
+            margin-bottom:  -16px; /* فاصله خط از نوشته */
         }
 
 
@@ -204,14 +206,14 @@ body {
      /* استایل برای منوی اصلی */
      .menu {
             position: absolute; /* قرار دادن منو به‌صورت مطلق */
-            top: 70px; /* فاصله از بالای صفحه */
-            left: 0;
-            width: 100%; /* عرض کامل صفحه */
+            top: 63px; /* فاصله از بالای صفحه */
+            left: 362px;
+            width: 856px; /* عرض کامل صفحه */
             z-index: 2; /* قرار دادن منو بالاتر از تصویر */
             display: flex;
             justify-content: center; /* قرار دادن آیتم‌ها در مرکز */
             align-items: center;
-            gap: 30px; /* فاصله بین آیتم‌ها */
+            gap: 25px; /* فاصله بین آیتم‌ها */
             padding: 10px 0; /* فاصله داخلی */
             letter-spacing: 3px; /* فاصله بین حروف */
             margin-top: 50px; /* فاصله از بالای صفحه */
@@ -228,6 +230,8 @@ body {
             position: relative; /* برای افکت هاور */
             transition: opacity 0.3s ease; /* انیمیشن محو شدن */
         }
+
+
         @font-face {
     font-family: 'menufont'; /* نام دلخواه برای فونت */
     src: url('UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7') format('woff2'); /* مسیر فایل فونت */
@@ -241,10 +245,10 @@ body {
         /* نقطه بین آیتم‌ها */
         .menu a::after {
             content: "■ "; /* نقطه */
-            font-size: 12px; /* اندازه نقطه */
+            font-size: 10px; /* اندازه نقطه */
             color:#c09d4b ; /* رنگ نقطه */
-            margin-right: 5px; /* فاصله از متن */
-            margin-left: 26px;
+            margin-right: 8px; /* فاصله از متن */
+            margin-left: 37px;
         }
 
         /* حذف نقطه برای آخرین آیتم */
@@ -258,9 +262,9 @@ body {
 .search-icon {
             position: absolute;
             top: 40px; /* فاصله از بالای صفحه */
-            right: 340px; /* فاصله از سمت راست */
-            width: 20.8px; /* عرض آیکون */
-            height: 20px; /* ارتفاع آیکون */
+            right: 338px; /* فاصله از سمت راست */
+            width: 18px; /* عرض آیکون */
+            height: 18px; /* ارتفاع آیکون */
             cursor: pointer; /* نشانگر ماوس به حالت کلیک تغییر می‌کند */
             transition: transform 0.3s ease; /* انیمیشن هنگام هاور */
             z-index: 2; /* بالاتر از تصویر پس‌زمینه */
@@ -276,21 +280,23 @@ body {
         /* استایل دکمه */
         .contact-button {
             position: absolute;
-            top: 20px; /* فاصله از بالای صفحه */
-            right: 160px; /* فاصله از سمت راست */
+            top: 22px; /* فاصله از بالای صفحه */
+            right: 162px; /* فاصله از سمت راست */
             padding: 0px 20px; /* فاصله داخلی */
             border: 1.5px solid white; /* حاشیه */
             border-radius: 40px; /* گرد کردن گوشه‌ها */
             background-color: transparent; /* پس‌زمینه شفاف */
             color: white; /* رنگ متن */
-            font-size: 16px; /* اندازه فونت */
+            font-size: 14px; /* اندازه فونت */
             text-align: center; /* متن در مرکز */
             font-family: 'CustomFont', sans-serif; /* فونت */
             text-decoration: none; /* حذف خط زیر متن */
             transition: all 0.3s ease; /* انیمیشن تغییر رنگ */
-            width: 105px; 
+            width: 102px; 
             height: 55px; 
             line-height: 55px;
+            font-weight: 600; /* ضخیم کردن متن */
+            letter-spacing: 1px; /* فاصله بین حروف */
         }
 
         /* تغییر رنگ هنگام هاور */
@@ -304,7 +310,7 @@ body {
             .social-icons {
                 position: absolute;
                 top: 40px; /* فاصله از بالای صفحه */
-               left: 171px; /* فاصله از سمت راست */
+               left: 178px; /* فاصله از سمت راست */
                 display: flex;
                 gap: 30px; /* فاصله بین آیکون‌ها */
             }
@@ -327,7 +333,7 @@ body {
             
                 .top-line {
                   width: 100%;
-                  height: 2px; /* ضخامت خط */
+                  height: 1px; /* ضخامت خط */
                   background-color: white; /* رنگ خط */
                   position: absolute;
                   top: 100px; /* فاصله از بالای صفحه */
@@ -343,7 +349,7 @@ body {
             left: 50%; /* فاصله از سمت چپ */
             transform: translateX(-50%); /* تنظیم دقیق لوگو در مرکز */
             z-index: 2; /* بالاتر از تصویر پس‌زمینه */
-            width: 165px; /* عرض لوگو */
+            width: 160px; /* عرض لوگو */
             height: auto; /* ارتفاع متناسب با عرض */
         }
 
@@ -362,7 +368,7 @@ body {
    .background-image {
                 width: 100%;
                 height: 120%;
-                position: absolute;
+                position: fixed;
                 top: 0;
                 left: 0;
                 z-index: 0; /* تصویر زیر همه عناصر قرار می‌گیرد */
@@ -375,24 +381,24 @@ body {
         
               /* استایل برای تصویر دوم */
               .overlay-image {
-                position: absolute;
-                top: 518px; /* موقعیت عمودی تصویر دوم */
-                left: 50%; /* موقعیت افقی تصویر دوم */
+                position: relative;
+                top: 525px; /* موقعیت عمودی تصویر دوم */
+                left: 48.5%; /* موقعیت افقی تصویر دوم */
                 transform: translate(-50%, -50%); /* برای قرار دادن دقیق در مرکز */
-                width: 430px; /* عرض دلخواه */
-                height: 446px;
-                height: auto; /* ارتفاع متناسب با عرض */
+                width: 445px; /* عرض دلخواه */
+                height:667px;
+              
               }
 
 
 /* استایل برای نوشته */
 .left-text {
             position: absolute;
-            top: 62%; /* وسط صفحه از نظر عمودی */
-            left: 12%; /* سمت چپ صفحه */
+            top: 60%; /* وسط صفحه از نظر عمودی */
+            left: 11.7%; /* سمت چپ صفحه */
             transform: translateY(-50%); /* برای تنظیم دقیق در مرکز */
             color: white; /* رنگ متن */
-            font-size: 60px; /* اندازه فونت */
+            font-size: 58px; /* اندازه فونت */
             font-family: 'CustomFont', sans-serif; /* فونت خوانا */
             text-align: left; /* متن به سمت چپ */
             margin: 0; /* حذف فاصله پیش‌فرض بین پاراگراف‌ها */
@@ -472,8 +478,8 @@ color:white;">
   <div class="left-text">
     <div class="text-line"></div>
     <p> Custom Tailor </p>
-       <p>for Your Fashion</p> 
-        <p> Style Fit</p>
+       <p>For Your Fashion</p> 
+        <p>Style Fit</p>
 </div>
 
 
